@@ -27,7 +27,7 @@ public class SubscriberServiceImpl implements SubscriberService<ActionDTO>
     {
         LOG.debug("Принят запрос " + action.toString());
         repository.save(convert(action));
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity(HttpStatus.CREATED);
     }
 
     private static Action convert(ActionDTO action)
